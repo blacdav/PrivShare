@@ -1,13 +1,13 @@
 export const Navitems = () => {
   return (
     <>
-      <a href="#features" className="text-white transition-colors ">
-        Features
+      <a href="#home" className="text-white transition-colors font-semibold">
+        Home
       </a>
-      <a href="#how-it-works" className="text-white transition-colors ">
-        How It Works
+      <a href="#docs" className="text-white transition-colors font-semibold">
+        Docs
       </a>
-      <a href="#about" className="text-white transition-colors ">
+      <a href="#about" className="text-white transition-colors font-semibold">
         About
       </a>
     </>

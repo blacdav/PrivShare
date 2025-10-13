@@ -53,7 +53,7 @@ export const ConnectWalletButton: React.FC = () => {
       keywords: ["walletconnect", "wallet connect"],
     },
     coinbase: {
-      icon: "/coinbase.svg",
+      icon: "/coinbase-wallet.svg",
       keywords: ["coinbase", "coinbase wallet"],
     },
   } as const;
@@ -80,7 +80,7 @@ export const ConnectWalletButton: React.FC = () => {
     <div className="relative">
       <button
         onClick={open}
-        className="relative inline-block p-px font-medium leading-6 text-white cursor-pointer rounded-3xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
+        className="relative inline-block p-px border-2 font-medium leading-6 text-white cursor-pointer rounded-3xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
       >
         <span className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#BCB1FF] via-[#A396FF] to-[#8A7AFF] p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
 

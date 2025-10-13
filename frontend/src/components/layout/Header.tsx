@@ -2,7 +2,7 @@ import { ConnectWalletButton } from "../web3/ConnectWalletButton";
 import { Drawer, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { Navitems } from "./Navitems";
-import { Component, Info, MonitorCog } from "lucide-react";
+import { FileSpreadsheet, Home, Info } from "lucide-react";
 
 export const Header: React.FC = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
             <Navitems />
           </nav>
 
-          <div className="sm:block hidden">
+          <div className="md:block hidden">
             <ConnectWalletButton />
           </div>
 
@@ -46,22 +46,18 @@ export const Header: React.FC = () => {
               </div>
               <nav className="flex flex-col space-y-8 mt-4 mb-auto  ">
                 <a
-                  href="#features"
+                  href="#home"
                   className="hover:text-[#BCB1FF] px-6 py-2 hover:bg-white w-fit text-white rounded-3xl transition-colors  space-x-2 inline-flex whitespace-nowrap"
                 >
-                  <Component />
-                  <span className="text-base sm:text-sm xs:text-xs">
-                    Features
-                  </span>
+                  <Home />
+                  <span className="text-base sm:text-sm xs:text-xs">Home</span>
                 </a>
                 <a
-                  href="#how-it-works"
+                  href="#docs"
                   className="hover:text-[#BCB1FF] px-6 py-2 hover:bg-white w-fit text-white rounded-3xl transition-colors  space-x-2 inline-flex whitespace-nowrap"
                 >
-                  <MonitorCog />
-                  <span className="text-base sm:text-sm xs:text-xs">
-                    How It Works
-                  </span>
+                  <FileSpreadsheet />
+                  <span className="text-base sm:text-sm xs:text-xs">Docs</span>
                 </a>
                 <a
                   href="#about"
