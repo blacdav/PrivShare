@@ -25,6 +25,6 @@ export const Finalize: RequestHandler = async (req, res) => {
     return res.json({ ok: true });
   } catch (e) {
     console.error('finalize error', e);
-    return res.status(500).json({ error: e.message });
+    return res.status(500).json({ error: e });
   }
-});
+};

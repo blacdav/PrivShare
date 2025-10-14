@@ -1,8 +1,9 @@
 import { RequestHandler } from "express";
 import { create as createIpfsClient } from 'ipfs-http-client';
 import FilesModel from "../../models/files.model";
+import { AppConfig } from "../../config";
 
-const ipfs = createIpfsClient({ url: IPFS_API });
+const ipfs = createIpfsClient({ url: AppConfig.ipfs_api });
 
 export const Upload: RequestHandler = async (req, res) => {
   try {
@@ -29,6 +30,6 @@ export const Upload: RequestHandler = async (req, res) => {
     return res.json({ cid: cidStr });
   } catch (e) {
     console.error('upload error', e);
-    return res.status(500).json({ error: e.message });
+    return res.status(500).json({ error: e });
   }
 };

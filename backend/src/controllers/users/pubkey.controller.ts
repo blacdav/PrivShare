@@ -1,17 +1,12 @@
 import { RequestHandler } from "express";
 import UserModel from "../../models/user.model";
 
-export const PubKey: RequestHandler = async (req, res) => {
-  try {
-    const wallet = req.auth.address;
-    const { pubkey } = req.body;
-    if (!pubkey) return res.status(400).json({ error: 'missing pubkey' });
+export const GetPubKey: RequestHandler = async (req, res) => {
+  const wallet = (req.params.wallet || '').toLowerCase();
+  
+  const u = await UserModel.findOne({ wallet });
 
-    // update user's encPubKey
-    await UserModel.updateOne({ wallet }, { $set: { encPubKey: pubkey, registeredAt: new Date() } }, { upsert: true });
-    return res.json({ ok: true });
-  } catch (e) {
-    console.error('register pubkey error', e);
-    return res.status(500).json({ error: e.message });
-  }
+  if (!u || !u.encPubKey) return res.status(404).json({ error: 'pubkey not found' });
+  
+  return res.json({ pubkey: u.encPubKey });
 };

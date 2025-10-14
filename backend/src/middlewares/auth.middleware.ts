@@ -1,6 +1,7 @@
 import * as jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import { RequestHandler } from 'express';
+import { AppConfig } from '../config';
 dotenv.config();
 
 // Extend Express Request interface to include 'auth'
@@ -10,15 +11,14 @@ declare module 'express-serve-static-core' {
   }
 }
 
-const JWT_SECRET = (process.env.JWT_SECRET ?? 'jllnblnljnl') as string;
-const JWT_EXPIRES_IN = (process.env.JWT_EXPIRES_IN || '1h') as string;
-
 export function signJwt<T extends object>(payload: T) {
-    return jwt.sign(
-        payload as object,
-        JWT_SECRET,
-        { expiresIn: JWT_EXPIRES_IN }
-    );
+  const secret: jwt.Secret = AppConfig.jwt_secret;
+
+  // const options: jwt.SignOptions = {
+  //   expiresIn: (AppConfig.jwt_expires || '1Hr') as string | number,
+  // };
+
+  return jwt.sign(payload, secret);
 }
 
 export const AuthRequired: RequestHandler = (req, res, next) => {
@@ -32,7 +32,7 @@ export const AuthRequired: RequestHandler = (req, res, next) => {
   const token = parts[1];
 
   try {
-    const decoded = jwt.verify(token, JWT_SECRET);
+    const decoded = jwt.verify(token, AppConfig.jwt_secret);
     req.auth = decoded; // e.g., { address }
 
     return next();

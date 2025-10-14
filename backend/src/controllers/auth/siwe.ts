@@ -14,20 +14,20 @@ export const Siwe: RequestHandler = async (req, res) => {
     const fields = await siweMsg.verify(signature);
 
     // verify nonce exists
-    const n = fields.nonce;
+    const n = fields.data.nonce;
     const found = await NonceModel.findOne({ nonce: n });
     if (!found) return res.status(400).json({ error: 'invalid or expired nonce' });
     // delete used nonce
     await NonceModel.deleteOne({ nonce: n });
 
-    const wallet = fields.address.toLowerCase();
+    const wallet = fields.data.address.toLowerCase();
     // ensure user exists
     await UserModel.updateOne({ wallet }, { $setOnInsert: { wallet } }, { upsert: true });
 
     const token = signJwt({ address: wallet });
-    res.json({ ok: true, token, address: wallet });
+    return res.json({ ok: true, token, address: wallet });
   } catch (e) {
     console.error('siwe error', e);
-    res.status(400).json({ error: e });
+    return res.status(400).json({ error: e });
   }
 };
