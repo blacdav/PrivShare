@@ -22,7 +22,7 @@
   "license": "ISC",
   "author": "team2",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/index",
@@ -30,6 +30,7 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^24.7.0",
     "install": "^0.13.0",
@@ -38,6 +39,14 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "@types/jsonwebtoken": "^9.0.10",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "ipfs-http-client": "^60.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.1",
+    "nanoid": "^5.1.6",
+    "siwe": "^3.0.0"
   }
 }
