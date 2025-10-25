@@ -52,7 +52,11 @@ export const DashboardSidebar = () => {
             <div className="w-8 h-8 bg-[#00B495] rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">D</span>
             </div>
-            <h1 className="ml-3 text-xl font-bold text-gray-800">privshare</h1>
+            <Link to={"/"}>
+              <h1 className="ml-3 text-xl font-bold text-gray-800">
+                privshare
+              </h1>
+            </Link>
           </div>
         </div>
 
