@@ -12,8 +12,8 @@ export const Header: React.FC = () => {
       <div className="">
         <div className=" flex items-center justify-between">
           <div className="flex justify-center  space-x-2 ">
-            <img src="/icon.svg" alt="" className="h-10" />
-            <h1 className="text-2xl font-semibold text-white">privshare</h1>
+            <img src="/icon-dark.svg" alt="" className="h-10" />
+            <h1 className="text-2xl font-semibold text-black">privshare</h1>
           </div>
           <nav className="hidden  md:flex space-x-8">
             <Navitems />
@@ -72,7 +72,7 @@ export const Header: React.FC = () => {
               </div>
             </Drawer>
 
-            <Burger color="white" variant="default" onClick={open} />
+            <Burger color="#000000" variant="default" onClick={open} />
           </div>
         </div>
       </div>

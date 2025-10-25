@@ -44,8 +44,7 @@ export const About = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#111111] mb-4 md:mb-6">
-            Built <span className="text-[#A77BFF]">for</span> Privacy, Backed{" "}
-            <span className="text-[#A77BFF]">by</span> Blockchain.
+            Built for Privacy, Backed by Blockchain.
           </h2>
           <p className="text-lg md:text-xl text-[#7A7A7A] leading-relaxed">
             No central servers. No hidden access. Just you and your key.
@@ -56,20 +55,20 @@ export const About = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`group relative bg-white rounded-2xl p-6 md:p-8 border border-[#A77BFF] hover:border-[#BCB1FF] transition-all duration-300 hover:shadow-xl ${
+              className={`group relative bg-white rounded-2xl p-6 md:p-8 border border-[#00B495] hover:border-[#BCB1FF] transition-all duration-300 hover:shadow-xl ${
                 index === 0
                   ? "bg-white/80 backdrop-blur-sm lg:bg-white/70 lg:backdrop-blur-[1px]"
                   : "bg-white"
               }`}
             >
               <div className="w-12 h-12  rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#BCB1FF] transition-colors duration-300">
-                <div className="text-[#A77BFF] group-hover:text-white transition-colors duration-300">
+                <div className="text-[#00B495] group-hover:text-white transition-colors duration-300">
                   <feature.icon />
                 </div>
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-xl font-semibold text-[#A77BFF] group-hover:text-[#111111] transition-colors duration-300">
+                <h3 className="text-xl font-semibold text-[#00B495] group-hover:text-[#111111] transition-colors duration-300">
                   {feature.title}
                 </h3>
                 <p className="text-[#3D3D3D] leading-relaxed">

@@ -9,18 +9,14 @@ const HeroSection = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
           <div className="flex-1 text-center lg:text-left space-y-6 lg:space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Share files.
-              <br />
-              Stay
-              <span className="text-[#BCB1FF]"> Private.</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
+              Share files. {/* <br /> */}
+              Stay Private
             </h1>
 
-            <p className="text-lg md:text-xl text-white max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Upload encrypted files <span className="text-[#BCB1FF]">to</span>{" "}
-              the blockchain. Only those{" "}
-              <span className="text-[#BCB1FF]">with</span> your{" "}
-              <span className="text-[#BCB1FF]">key</span> can unlock them.
+            <p className="text-lg md:text-xl text-black max-w-lg mx-auto lg:mx-0 leading-relaxed">
+              Upload encrypted files to the blockchain. Only those with your key
+              can unlock them.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">

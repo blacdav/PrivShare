@@ -91,7 +91,7 @@ const ConnectWalletStep = () => {
 const EncryptUploadStep = () => {
   return (
     <div className="space-y-4">
-      <div className="border-[1.5px] border-[#A77BFF] bg-white rounded-2xl p-4   ">
+      <div className="border-[1.5px] border-[#00B495] bg-white rounded-2xl p-4   ">
         <div className="flex items-center">
           <div>
             <div className=" flex items-center text-[#0B0B0B] font-bold text-2xl ">
@@ -128,7 +128,7 @@ const EncryptUploadStep = () => {
           <div className="flex items-center space-x-3 mt-3">
             <div className="flex-1 bg-gray-200 rounded-full h-2">
               <div
-                className="bg-[#A77BFF] h-2 rounded-full transition-all duration-300"
+                className="bg-[#00B495] h-2 rounded-full transition-all duration-300"
                 style={{ width: "60%" }}
               ></div>
             </div>
@@ -154,17 +154,17 @@ const ShareControlStep = () => {
             Only those with this key can unlock your file
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 p-4 border-[1.5px] border-[#A77BFF] rounded-lg">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3 p-4 border-[1.5px] border-[#00B495] rounded-lg">
           <div className="bg-white rounded-lg p-3 flex-1 min-w-0">
             <div className="text-gray-500 font-normal truncate text-center lg:text-left">
-              Decryption <span className="text-[#A77BFF]">Key</span>
-              <span className="text-[#A77BFF]">8</span>f2b-
-              <span className="text-[#A77BFF]">24</span>ac-
-              <span className="text-[#A77BFF]">89</span>df
+              Decryption <span className="text-[#00B495]">Key</span>
+              <span className="text-[#00B495]">8</span>f2b-
+              <span className="text-[#00B495]">24</span>ac-
+              <span className="text-[#00B495]">89</span>df
             </div>
           </div>
 
-          <button className="bg-[#A77BFF] text-white px-6 py-3 rounded-2xl flex items-center justify-center space-x-2 whitespace-nowrap flex-shrink-0 hover:bg-[#8A5FD6] transition-colors duration-200">
+          <button className="bg-[#00B495] text-white px-6 py-3 rounded-2xl flex items-center justify-center space-x-2 whitespace-nowrap flex-shrink-0 hover:bg-[#8A5FD6] transition-colors duration-200">
             <span>Copy key</span>
             <Copy className="w-4 h-4" />
           </button>
@@ -220,14 +220,14 @@ export default function VerticalLinearStepper() {
                 {step.label}
               </StepLabel>
               <StepContent>
-                <Typography color="#A77BFF">{step.description}</Typography>
+                <Typography color="#000000">{step.description}</Typography>
                 <Box sx={{ mb: 2 }}>
                   <Button
                     variant="contained"
                     onClick={handleNext}
                     sx={{ mt: 1, mr: 1 }}
                     style={{
-                      backgroundColor: "#A77BFF",
+                      backgroundColor: "#00B495",
                     }}
                   >
                     {index === steps.length - 1 ? "Finish" : "Continue"}
@@ -236,6 +236,9 @@ export default function VerticalLinearStepper() {
                     disabled={index === 0}
                     onClick={handleBack}
                     sx={{ mt: 1, mr: 1 }}
+                    style={{
+                      color: "black",
+                    }}
                   >
                     Back
                   </Button>
@@ -268,7 +271,7 @@ export default function VerticalLinearStepper() {
             p: 4,
             width: "100%",
             maxWidth: { lg: 600 },
-            backgroundColor: "#A77BFF29",
+            backgroundColor: "#00B49529",
             borderRadius: "8px",
           }}
         >

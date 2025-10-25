@@ -12,7 +12,7 @@ export const TryItYourself = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           <div className="flex-1 text-center lg:text-left text-[#111111]">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight">
-              Try It <span className="text-[#A77BFF]">Yourself</span>
+              Try It <span className="text-[#00B495]">Yourself</span>
             </h2>
             <p className="text-lg md:text-xl opacity-90 leading-relaxed max-w-lg mx-auto lg:mx-0 text-[#7A7A7A]">
               Experience how PrivShare encrypts and protects your files — all in
@@ -22,7 +22,7 @@ export const TryItYourself = () => {
 
           <div className="flex-1 w-full max-w-md lg:max-w-lg">
             <div className="bg-white rounded-[8px] shadow-xl border border-[#BCB1FF] p-6 md:p-8">
-              <div className="text-start space-y-6 border border-[#A77BFF] rounded-3xl p-4 md:p-6">
+              <div className="text-start space-y-6 border border-[#00B495] rounded-3xl p-4 md:p-6">
                 <div>
                   <h3 className="text-xl md:text-2xl font-semibold text-[#0B0B0B] mb-2 md:mb-3">
                     Media upload
@@ -32,12 +32,12 @@ export const TryItYourself = () => {
                   </p>
                 </div>
 
-                <div className="border border-[#A77BFF] rounded-xl hover:border-[#BCB1FF] transition-colors duration-300 cursor-pointer">
+                <div className="border border-[#00B495] rounded-xl hover:border-[#BCB1FF] transition-colors duration-300 cursor-pointer">
                   <div className="flex flex-col xs:flex-row xs:flex-wrap items-start xs:items-center gap-2 p-2">
                     <p className="text-sm font-normal text-[#0B0B0B] break-words flex-1 min-w-0 w-full xs:w-auto">
                       https://sharefile.xyz/file.jpg
                     </p>
-                    <button className="px-4 py-2 text-sm font-semibold bg-[#A77BFF] text-white border border-[#BCB1FF] rounded-2xl hover:bg-[#BCB1FF] hover:text-white transition-colors duration-300 whitespace-nowrap flex-shrink-0 min-w-[100px] w-full xs:w-auto justify-center xs:justify-start">
+                    <button className="px-4 py-2 text-sm font-semibold bg-[#00B495] text-white border border-[#BCB1FF] rounded-2xl hover:bg-[#BCB1FF] hover:text-white transition-colors duration-300 whitespace-nowrap flex-shrink-0 min-w-[100px] w-full xs:w-auto justify-center xs:justify-start">
                       Upload
                     </button>
                   </div>

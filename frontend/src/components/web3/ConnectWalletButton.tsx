@@ -84,7 +84,7 @@ export const ConnectWalletButton: React.FC = () => {
       >
         <span className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#BCB1FF] via-[#A396FF] to-[#8A7AFF] p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
 
-        <span className="relative z-10 block px-6 py-2 rounded-3xl bg-[#BCB1FF] group-hover:bg-white transition-colors duration-500">
+        <span className="relative z-10 block px-6 py-2 rounded-3xl bg-[#00B495] group-hover:bg-white transition-colors duration-500">
           <span className="text-white group-hover:text-[#BCB1FF] transition-colors duration-500">
             Connect Wallet
           </span>

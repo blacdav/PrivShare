@@ -10,28 +10,56 @@ import { About } from "./components/layout/About";
 import { TryItYourself } from "./components/layout/TryItYourself";
 import { Footer } from "./components/layout/Footer";
 import HowItWorks from "./components/layout/HowItWorks";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { DashboardLayout } from "./components/layout/DashboardLayout";
+import { DashboardOverview } from "./pages/dashboard/Overviewtab";
+import { ConsentManagement } from "./pages/dashboard/ConsentManagement";
+import { AuditTrail } from "./pages/dashboard/AuditTrail";
+import { ControlDetails } from "./pages/dashboard/ControlDetails";
+import { DataManagement } from "./pages/dashboard/Data";
 
 const queryClient = new QueryClient();
+
 function App() {
   return (
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>
-        <MantineProvider>
-          <div id="home">
-            <div className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed bg-[url('/hero-bg-mobile-noise.png')] md:bg-[url('/hero-bg-noise.png')] p-4 relative noise-overlay">
-              <div className="relative z-10">
-                <Header />
-                <HeroSection />
-              </div>
-            </div>
-            <HowItWorks />
-            <About />
-            <TryItYourself />
-            <Footer />
-          </div>
-        </MantineProvider>
-      </QueryClientProvider>
-    </WagmiProvider>
+    <Router>
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          <MantineProvider>
+            <Routes>
+              {/* Landing Page Route */}
+              <Route
+                path="/"
+                element={
+                  <div id="home">
+                    <div className="min-h-screen  p-4 relative noise-overlay">
+                      <div className="relative z-10">
+                        <Header />
+                        <HeroSection />
+                      </div>
+                    </div>
+                    <HowItWorks />
+                    <About />
+                    <TryItYourself />
+                    <Footer />
+                  </div>
+                }
+              />
+
+              {/* Dashboard Routes */}
+              {/* <Route path="/dashboard" element={<DashboardLayout />}> */}
+              <Route path="/dashboard" element={<DashboardLayout />}>
+                <Route path="" element={<DashboardOverview />} />
+                <Route path="consent" element={<ConsentManagement />} />
+                <Route path="audit" element={<AuditTrail />} />
+                <Route path="controls" element={<ControlDetails />} />
+                <Route path="data" element={<DataManagement />} />
+              </Route>
+            </Routes>
+          </MantineProvider>
+        </QueryClientProvider>
+      </WagmiProvider>
+    </Router>
   );
 }
 
