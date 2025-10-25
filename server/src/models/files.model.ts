@@ -11,7 +11,7 @@ export interface IFile {
 }
 
 const FileSchema = new Schema<IFile>({
-  fileId: {
+    fileId: {
         type: String,
         required: true,
         unique: true

@@ -1,14 +1,13 @@
 import { RequestHandler } from "express";
 import multer from "multer";
 import crypto from "crypto";
-// import FileModel from "../models/File";
-import AuditLog from "../models/AuditLog";
-import { IpfsService } from "../services/ipfs.service";
-import { EncryptionService } from "../services/encryption.service";
-import { BlockchainService } from "../services/blockchain.service";
 import { logger } from "../utils/logger";
 import User from "../../models/users.model";
 import File from "../../models/files.model";
+import { IpfsService } from "../../services/ipfs.service";
+import { EncryptionService } from "../../services/encryption.service";
+import { BlockchainService } from "../../services/blockchain.service";
+import Audit from "../../models/audit.model";
 
 const upload = multer({ storage: multer.memoryStorage() });
 const ipfs = new IpfsService();
@@ -64,7 +63,7 @@ export const Upload: RequestHandler = async (req, res) => {
       logger.warn("Skipping on-chain registration because OWNER_PRIVATE_KEY or CONTRACT_ADDRESS not set");
     }
 
-    await AuditLog.create({ action: "Upload", actor: userId, details: { fileId: fileIdHex, cid } });
+    await Audit.create({ action: "Upload", actor: userId, details: { fileId: fileIdHex, cid } });
 
     return res.json({ ok: true, fileId: fileIdHex, cid });
   } catch (err) {
@@ -89,7 +88,7 @@ export const Grant: RequestHandler = async (req, res) => {
     if (!signerKey) return res.status(500).json({ error: "Server signer not configured" });
 
     await blockchain.grantAccessOnChain(signerKey, fileId, granteeAddress);
-    await AuditLog.create({ action: "GrantAccess", actor: userId, details: { fileId, granteeAddress } });
+    await Audit.create({ action: "GrantAccess", actor: userId, details: { fileId, granteeAddress } });
 
     return res.json({ ok: true });
   } catch (err) {
@@ -113,7 +112,7 @@ export const Revoke: RequestHandler = async (req, res) => {
     if (!signerKey) return res.status(500).json({ error: "Server signer not configured" });
 
     await blockchain.revokeAccessOnChain(signerKey, fileId, granteeAddress);
-    await AuditLog.create({ action: "RevokeAccess", actor: userId, details: { fileId, granteeAddress } });
+    await Audit.create({ action: "RevokeAccess", actor: userId, details: { fileId, granteeAddress } });
 
     return res.json({ ok: true });
   } catch (err) {

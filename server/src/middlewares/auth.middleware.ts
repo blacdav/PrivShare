@@ -1,7 +1,14 @@
 import { RequestHandler } from "express";
 import jwt from "jsonwebtoken";
+import { jwtConfig } from "../config";
 
 export interface AuthPayload extends jwt.JwtPayload {
+  user_id?: string;
+  email?: string;
+  role?: string;
+}
+
+export interface FilePayload extends jwt.JwtPayload {
   user_id?: string;
   email?: string;
   role?: string;
@@ -11,6 +18,7 @@ declare global {
   namespace Express {
     interface Request {
       user?: AuthPayload;
+      // file?: FilePayload;
     }
   }
 }

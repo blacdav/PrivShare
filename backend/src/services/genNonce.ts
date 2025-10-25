@@ -1,6 +1,13 @@
-export const GenNonce: RequestHandler = (req, res) => {
+import { RequestHandler } from "express";
+import { nanoid } from "nanoid";
+import nonceModel from "../models/nonce.model";
+
+export const GenNonce: RequestHandler = async (req, res) => {
     const n = nanoid(12);
-    const doc = new Nonce({ nonce: n });
+
+    const doc = await nonceModel.create({ nonce: n });
+
     await doc.save();
-    res.send(n);
-});
+
+    return res.send(n);
+}
