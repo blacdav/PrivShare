@@ -14,7 +14,7 @@ const navigation = [
   { name: "Overview", href: "/dashboard/", Icon: BarChart3 },
   { name: "Consent Management", href: "/dashboard/consent", Icon: Shield },
   { name: "Audit Trail", href: "/dashboard/audit", Icon: FileText },
-  { name: "Control Details", href: "/dashboard/controls", Icon: Settings },
+  { name: "Compliance Details", href: "/dashboard/controls", Icon: Settings },
   { name: "Data", href: "/dashboard/data", Icon: FileUp },
 ];
 
