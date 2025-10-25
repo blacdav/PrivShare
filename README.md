@@ -5,6 +5,12 @@ Built on the **BlockDAG chain**, it allows users to **encrypt, share, and manage
 
 ---
 
+website: https://privshareclient.vercel.app
+2mins video: 
+pitch-Deck: https://www.canva.com/design/DAG2zeAudTA/etdxsPK8LKG1xQ--9PXzjA/edit?utm_content=DAG2zeAudTA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+---
+
 ## 🧩 Overview
 
 The BlockDAG Secure Data Transfer Platform ensures **data confidentiality, integrity, and compliance** across all sectors — from healthcare to finance to education.
