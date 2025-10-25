@@ -6,7 +6,7 @@ Built on the **BlockDAG chain**, it allows users to **encrypt, share, and manage
 ---
 
 website: https://privshareclient.vercel.app
-2mins video: 
+2mins video: https://drive.google.com/file/d/1r4JA-f4nB2nNFmb_27bmxKQD3wn1Ixr4/view?usp=sharing
 pitch-Deck: https://www.canva.com/design/DAG2zeAudTA/etdxsPK8LKG1xQ--9PXzjA/edit?utm_content=DAG2zeAudTA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ---
