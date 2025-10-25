@@ -47,9 +47,9 @@ export const DashboardSidebar = () => {
         `}
       >
         {/* Logo */}
-        <div className="flex items-center px-6 py-5 ">
+        <div className="flex items-center justify-center px-6 py-5 ">
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-[#00B495] rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 flex items-center justify-center">
               <img src="/icon-dark.svg" alt="" className="h-6" />
             </div>
             <Link to={"/"}>
