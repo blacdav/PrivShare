@@ -50,7 +50,7 @@ export const DashboardSidebar = () => {
         <div className="flex items-center px-6 py-5 ">
           <div className="flex items-center">
             <div className="w-8 h-8 bg-[#00B495] rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">D</span>
+              <img src="/icon-dark.svg" alt="" className="h-6" />
             </div>
             <Link to={"/"}>
               <h1 className="ml-3 text-xl font-bold text-gray-800">
