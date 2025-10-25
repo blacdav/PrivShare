@@ -26,11 +26,11 @@ const HeroSection = () => {
               </div>
               <Link
                 to="/dashboard"
-                className="group relative inline-block p-px border-2 border-black font-medium leading-6 text-black cursor-pointer rounded-3xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 no-underline"
+                className="group relative inline-block p-px font-medium leading-6 text-black cursor-pointer rounded-3xl transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95 no-underline border-2 border-black"
               >
                 <span className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#BCB1FF] via-[#A396FF] to-[#8A7AFF] p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
 
-                <span className="relative z-10 block px-6 py-2 rounded-3xl bg-transparent group-hover:bg-white transition-colors duration-500">
+                <span className="relative z-10 block px-6 py-3 rounded-3xl bg-transparent group-hover:bg-white transition-colors duration-500">
                   <span className="text-black group-hover:text-[#BCB1FF] transition-colors duration-500">
                     Upload Files
                   </span>
